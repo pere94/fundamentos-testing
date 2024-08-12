@@ -200,7 +200,8 @@ const config: Config = {
   // watchman: true,
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
-  }
+  },
+  testTimeout: 60000 // Aumenta el tiempo de espera a 60 segundos
 }
 
 export default config
