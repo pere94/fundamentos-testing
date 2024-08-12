@@ -11,7 +11,8 @@
     "bundev": "bun --watch ./src/main.ts",
     "test:unit": "NODE_ENV=test jest --config ./jest.config.ts --detectOpenHandles --forceExit",
     "test:integration": "NODE_ENV=test jest --config ./jest-integration.config.ts --forceExit --detectOpenHandles",
-    "test:e2e": "NODE_ENV=test jest --config ./jest-e2e.config.ts --forceExit --detectOpenHandles"
+    "test:e2e": "NODE_ENV=test jest --config ./jest-e2e.config.ts --forceExit --detectOpenHandles",
+    "lint": "eslint src/**"
   },
   "keywords": [],
   "author": "",
