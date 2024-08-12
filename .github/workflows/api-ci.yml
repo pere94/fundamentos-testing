@@ -34,4 +34,4 @@ jobs:
             NODE_ENV: test
             MONGODB_URL_TEST: mongodb+srv://alejperezsuarez:9PlKIrb1lntBKhxz@mongodb.nkp2t.mongodb.net/?retryWrites=true&w=majority&appName=MongoDB
             MONGODB_DBNAME_TEST: dbtest
-          run: npm run test
+          run: npm run test:e2e
