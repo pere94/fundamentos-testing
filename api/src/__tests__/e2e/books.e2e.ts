@@ -30,7 +30,7 @@ describe('Tests Api', () => {
     await client.connect()
     database = client.db(dbName)
     console.log('🚀 ~ beforeAll ~ database:', database)
-  }, 30000)
+  }, 60000)
 
   afterAll((doneCallback) => {
     (async () => {
