@@ -15,14 +15,15 @@ jobs:
 
       services:
         mongodb:
-          image: mongo:latest
+          image: mongo
           ports:
             - 27017:27017
           env:
             MONGO_INITDB_ROOT_USERNAME: root
             MONGO_INITDB_ROOT_PASSWORD: 123456
+            MONGO_INITDB_DATABASE: dbtest
           options: >-
-            --health-cmd "mongo --eval 'db.runCommand({ ping: 1 })' --quiet || exit 1"
+            --health-cmd mongo
             --health-interval 10s
             --health-timeout 5s
             --health-retries 5
