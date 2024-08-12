@@ -25,9 +25,7 @@ describe('Tests Api', () => {
         version: ServerApiVersion.v1,
         strict: true,
         deprecationErrors: true
-      },
-      tls: true, // Forcing SSL/TLS
-      tlsAllowInvalidCertificates: true
+      }
     })
     await client.connect()
     database = client.db(dbName)
