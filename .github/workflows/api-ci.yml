@@ -39,6 +39,8 @@ jobs:
         - name: Install dependencies
           shell: bash
           run: npm ci
+        - name: View MongoDB logs
+          run: docker logs $(docker ps -q --filter ancestor=mongo:latest)
         - name: Run unit tests
           shell: bash
           env:
