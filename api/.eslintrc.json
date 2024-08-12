@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+      "standard-with-typescript",
+      "plugin:@typescript-eslint/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["jest", "@typescript-eslint"],
+    "rules": {
+      "no-unused-vars": "error",
+      "no-undef": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "semi": "error",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off"
+    }
+}
