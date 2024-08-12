@@ -7,9 +7,7 @@ import { createBooksFake } from '@/utils/faker/faker.utils'
 import { EnviromentVariablesConfig } from '@/config/EnviromentVariablesConfig.config'
 
 const dbName = EnviromentVariablesConfig.dbNameTest ?? ''
-console.log('🚀 ~ dbName:', dbName)
 const databaseUrlTest = EnviromentVariablesConfig.databaseUrlTest ?? ''
-console.log('🚀 ~ databaseUrlTest:', databaseUrlTest)
 
 describe('Tests Api', () => {
   let app: Express
@@ -29,7 +27,6 @@ describe('Tests Api', () => {
     })
     await client.connect()
     database = client.db(dbName)
-    console.log('🚀 ~ beforeAll ~ database:', database)
   }, 60000)
 
   afterAll((doneCallback) => {
