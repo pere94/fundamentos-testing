@@ -49,7 +49,6 @@ describe('Test for BookServices', () => {
   describe('getOneBook', () => {
     test('should return a book by id', async () => {
       const id = mockBooks[0]._id.toHexString()
-      console.log('🚀 ~ test ~ id:', id)
       const result = await bookServices.getOneBook(id)
       expect(result).toEqual(mockBooks[0])
     })
