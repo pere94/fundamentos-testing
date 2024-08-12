@@ -22,7 +22,7 @@ jobs:
             MONGO_INITDB_ROOT_USERNAME: root
             MONGO_INITDB_ROOT_PASSWORD: 123456
           options: >-
-            --health-cmd "mongo --eval 'db.runCommand({ ping: 1 })' --quiet"
+            --health-cmd "mongo --eval 'db.runCommand({ ping: 1 })' --quiet || exit 1"
             --health-interval 10s
             --health-timeout 5s
             --health-retries 5
@@ -45,6 +45,6 @@ jobs:
           shell: bash
           env:
             NODE_ENV: test
-            DATABASE_URL: mongodb://root:123456@localhost:27017/
-            DB_NAME: dbtest
+            MONGODB_URL_TEST: mongodb://root:123456@localhost:27017/
+            MONGODB_DBNAME_TEST: dbtest
           run: npm run test
