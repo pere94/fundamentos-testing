@@ -39,8 +39,14 @@ jobs:
         - name: Install dependencies
           shell: bash
           run: npm ci
-        - name: View MongoDB logs
-          run: docker logs $(docker ps -q --filter ancestor=mongo:latest)
+        - name: Wait for MongoDB to be ready
+          shell: bash
+          run: |
+            echo "Waiting for MongoDB to be ready..."
+            while ! echo exit | mongo --host localhost --port 27017 --username root --password 123456 --authenticationDatabase admin; do
+              sleep 2
+            done
+            echo "MongoDB is ready."
         - name: Run unit tests
           shell: bash
           env:
