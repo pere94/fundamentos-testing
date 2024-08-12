@@ -17,7 +17,7 @@ describe('Tests Api', () => {
 
   beforeAll(async () => {
     app = createApp()
-    server = app.listen(3000)
+    server = app.listen(3005)
     client = new MongoClient(databaseUrlTest, {
       serverApi: {
         version: ServerApiVersion.v1,
