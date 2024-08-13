@@ -1,4 +1,5 @@
 name: API CI
+#on: [push] # This is the default event that triggers the workflow to run when a push event occurs.
 on:
   push:
     paths:
